@@ -87,5 +87,4 @@ defined('EXIT__AUTO_MAX')      or define('EXIT__AUTO_MAX', 125); // highest auto
 
 define('SITE_NAME', 'E-Learning');
 define('VIEW_ADMIN', 'admin/content/');
-define('VIEW_PENDIDIK', 'pendidik/content');
-define('VIEW_TERDIDIK', 'terdidik/content');
+define('VIEW_CLIENT', 'client/content/');
