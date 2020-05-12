@@ -18,6 +18,7 @@
                 </div>
             </div>
         </main>
+        <?php $this->load->view("client/_partials/footer.php") ?>
 
         <?php $this->load->view("client/_partials/modal.php") ?>
     </div>
