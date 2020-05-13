@@ -53,6 +53,47 @@
 </form>
 <!--END MODAL KELAS EDIT-->
 
+<!-- MODAL AKADEMIK EDIT -->
+<form>
+    <div class="modal fade" id="Modal_Akademik_Edit" tabindex="-1" role="dialog" aria-labelledby="editAkademik" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editAkademik">Edit Kelas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Id Akademik</label>
+                        <div class="col-md-10">
+                            <input type="text" name="id_akademik_edit" id="id_akademik_edit" class="form-control" placeholder="Id Akademik" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Nama Akademik</label>
+                        <div class="col-md-10">
+                            <input type="text" name="nama_akademik_edit" id="nama_akademik_edit" class="form-control" placeholder="Nama Akademik">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Kode Akademik</label>
+                        <div class="col-md-10">
+                            <input type="text" name="kode_akademik_edit" id="kode_akademik_edit" class="form-control" placeholder="kode_akademik_edit">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btn_akademik_update" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<!--END MODAL AKADEMIK EDIT-->
+
 
 <!--MODAL Kelas DELETE-->
 <form>
@@ -95,6 +136,42 @@
     </div>
 </form>
 <!--END MODAL Kelas DELETE-->
+
+<!--MODAL AKADEMIK DELETE-->
+<form>
+    <div class="modal fade" id="Modal_Akademik_Delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hapus Akademik</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Nama Akademik</label>
+                        <div class="col-md-10">
+                            <input type="text" name="nama_akademik_edit" id="nama_akademik_edit" class="form-control" placeholder="Nama Akademik">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Kode Akademik</label>
+                        <div class="col-md-10">
+                            <input type="text" name="kode_akademik_edit" id="kode_akademik_edit" class="form-control" placeholder="Kode Akademik">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" name="id_akademik_delete" id="id_akademik_delete" class="form-control">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="button" type="submit" id="btn_delete_akademik" class="btn btn-primary">Iya</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<!--END MODAL AKADEMIK DELETE-->
 
 
 <!--MODAL tambah pendidik -->

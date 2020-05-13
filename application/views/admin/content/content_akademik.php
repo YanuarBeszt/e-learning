@@ -33,6 +33,7 @@
                                     <div class="col-md-2" style="margin-top: 32px;">
                                         <button type="submit" id="btn_save_akademik" class="btn btn-primary">Simpan</button>
                                     </div>
+
                                 </div>
                                 <!-- /.card-body -->
                             </div>

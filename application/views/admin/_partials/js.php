@@ -47,12 +47,12 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        show_kelas(); //call function show all kelas
 
         $('#dataKelas').dataTable();
-        show_akademik(); //call function show all kelas
+        show_kelas(); //call function show all kelas
 
         $('#dataAkademik').dataTable();
+        show_akademik(); //call function show all kelas
 
         //function show all kelas
         function show_kelas() {
@@ -81,6 +81,26 @@
 
             });
         }
+
+         //Save kelas
+        $('#btn_save').on('click', function() {
+            var nama_kelas = $('#nama_kelas').val();
+            $.ajax({
+                type: "POST",
+                url: "<?php echo site_url('Admin/Kelas/save') ?>",
+                dataType: "JSON",
+                data: {
+                    nama_kelas: nama_kelas
+                },
+                success: function(data) {
+                    $('[name="nama_kelas"]').val("");
+                    show_kelas();
+                }
+            });
+            return false;
+        });
+
+
         //function show all akademik
         function show_akademik() {
              $.ajax({
@@ -109,23 +129,8 @@
 
             });
         }
-        //Save kelas
-        $('#btn_save').on('click', function() {
-            var nama_kelas = $('#nama_kelas').val();
-            $.ajax({
-                type: "POST",
-                url: "<?php echo site_url('Admin/Kelas/save') ?>",
-                dataType: "JSON",
-                data: {
-                    nama_kelas: nama_kelas
-                },
-                success: function(data) {
-                    $('[name="nama_kelas"]').val("");
-                    show_kelas();
-                }
-            });
-            return false;
-        });
+
+       
 
         //get data for update record
         $('#show_data').on('click', '.item_edit', function() {
@@ -160,7 +165,46 @@
             return false;
         });
 
-        //get data for delete record
+        //get data for update record Akademik
+        $('#show_data_akademik').on('click', '.item_edit', function() {
+            var id_akademik = $(this).data('id_akademik');
+            var nama_akademik = $(this).data('nama_akademik');
+            var kode_akademik = $(this).data('kode_akademik');
+
+            $('#Modal_Akademik_Edit').modal('show');
+            $('[name="id_akademik_edit"]').val(id_akademik);
+            $('[name="nama_akademik_edit"]').val(nama_akademik);
+            $('[name="kode_akademik_edit"]').val(kode_akademik);
+        });
+
+        //update record to database
+        $('#btn_akademik_update').on('click', function(event) {
+            event.preventDefault();
+            var id_akademik = $('#id_akademik_edit').val();
+            var nama_akademik = $('#nama_akademik_edit').val();
+            var kode_akademik = $('#kode_akademik_edit').val();
+            $.ajax({
+                type: "POST",
+                url: "<?php echo base_url('Admin/Akademik/update') ?>",
+                dataType: "JSON",
+                data: {
+                    id_akademik_edit: id_akademik,
+                    nama_akademik_edit: nama_akademik,
+                    kode_akademik_edit: kode_akademik
+                },
+                success: function(data) {
+                    $('[name="id_akademik_edit"]').val("");
+                    $('[name="nama_akademik_edit"]').val("");
+                    $('[name="kode_akademik_edit"]').val("");
+                    $('#Modal_Akademik_Edit').modal('hide');
+                    show_akademik();
+                }
+            });
+            return false;
+        });
+
+
+        //get data for delete record Kelas
         $('#show_data').on('click', '.item_delete', function() {
             var id_kelas = $(this).data('id_kelas');
 
@@ -182,6 +226,33 @@
                     $('[name="id_kelas_delete"]').val("");
                     $('#Modal_Delete').modal('hide');
                     show_kelas();
+                }
+            });
+            return false;
+        });
+
+         //get data for delete record Akademik
+        $('#show_data_akademik').on('click', '.item_delete', function() {
+            var id_akademik = $(this).data('id_akademik');
+
+            $('#Modal_Akademik_Delete').modal('show');
+            $('[name="id_akademik_delete"]').val(id_akademik);
+        });
+
+        //delete record to database
+        $('#btn_delete_akademik').on('click', function() {
+            var id_akademik = $('#id_akademik_delete').val();
+            $.ajax({
+                type: "POST",
+                url: "<?php echo site_url('Admin/Akademik/delete') ?>",
+                dataType: "JSON",
+                data: {
+                    id_akademik: id_akademik
+                },
+                success: function(data) {
+                    $('[name="id_akademik_delete"]').val("");
+                    $('#Modal_Akademik_Delete').modal('hide');
+                    show_akademik();
                 }
             });
             return false;
@@ -216,70 +287,8 @@
             return false;
         });
 
-        //get data for update record
-        $('#show_data_akademik').on('click', '.item_edit', function() {
-            var id_akademik = $(this).data('id_akademik');
-            var nama_akademik = $(this).data('nama_akademik');
-            var kode_akademik = $(this).data('kode_akademik');
-
-            $('#Modal_Edit').modal('show');
-            $('[name="id_akademik_edit"]').val(id_akademik);
-            $('[name="nama_akademik_edit"]').val(nama_akademik);
-            $('[name="kode_akademik_edit"]').val(kode_akademik);
-        });
-
-        //update record to database
-        $('#btn_update').on('click', function(event) {
-            event.preventDefault();
-            var id_akademik = $('#id_akademik_edit').val();
-            var nama_akademik = $('#nama_akademik_edit').val();
-            var kode_akademik = $('#kode_akademik_edit').val();
-            $.ajax({
-                type: "POST",
-                url: "<?php echo base_url('Admin/Akademik/update') ?>",
-                dataType: "JSON",
-                data: {
-                    id_akademik_edit: id_akademik,
-                    nama_akademik_edit: nama_akademik,
-                    kode_akademik_edit: kode_akademik
-                },
-                success: function(data) {
-                    $('[name="id_akademik_edit"]').val("");
-                    $('[name="nama_akademik_edit"]').val("");
-                    $('[name="kode_akademik_edit"]').val("");
-                    $('#Modal_Edit').modal('hide');
-                    show_akademik();
-                }
-            });
-            return false;
-        });
-
-        //get data for delete record
-        $('#show_data_akademik').on('click', '.item_delete', function() {
-            var id_akademik = $(this).data('id_kelas');
-
-            $('#Modal_Delete').modal('show');
-            $('[name="id_akademik_delete"]').val(id_akademik);
-        });
-
-        //delete record to database
-        $('#btn_delete').on('click', function() {
-            var id_akademik = $('#id_akademik_delete').val();
-            $.ajax({
-                type: "POST",
-                url: "<?php echo site_url('Admin/Akademik/delete') ?>",
-                dataType: "JSON",
-                data: {
-                    id_akademik: id_akademik
-                },
-                success: function(data) {
-                    $('[name="id_akademik_delete"]').val("");
-                    $('#Modal_Delete').modal('hide');
-                    show_kelas();
-                }
-            });
-            return false;
-        });
+        
+       
 
     });
 </script>
