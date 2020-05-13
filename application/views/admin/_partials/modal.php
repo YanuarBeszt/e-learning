@@ -18,7 +18,7 @@
 </div>
 
 
-<!-- MODAL EDIT -->
+<!-- MODAL KELAS EDIT -->
 <form>
     <div class="modal fade" id="Modal_Edit" tabindex="-1" role="dialog" aria-labelledby="editKelas" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -51,10 +51,10 @@
         </div>
     </div>
 </form>
-<!--END MODAL EDIT-->
+<!--END MODAL KELAS EDIT-->
 
 
-<!--MODAL DELETE-->
+<!--MODAL Kelas DELETE-->
 <form>
     <div class="modal fade" id="Modal_Delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -66,7 +66,24 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <strong>Apakah anda yakin untuk menghapus data?</strong>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Nama Penddik</label>
+                        <div class="col-md-10">
+                            <input type="text" name="nama_penddik" id="nama_penddik_edit" class="form-control" placeholder="Nama Penddik">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Email Pendidik</label>
+                        <div class="col-md-10">
+                            <input type="email" name="email_pendidik" id="email_pendidik" class="form-control" placeholder="Email pendidik" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Nama Kelas</label>
+                        <div class="col-md-10">
+                            <input type="text" name="nama_kelas_edit" id="nama_kelas_edit" class="form-control" placeholder="Nama Kelas">
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <input type="hidden" name="id_kelas_delete" id="id_kelas_delete" class="form-control">
@@ -77,4 +94,29 @@
         </div>
     </div>
 </form>
-<!--END MODAL DELETE-->
+<!--END MODAL Kelas DELETE-->
+
+
+<!--MODAL tambah pendidik -->
+<div class="modal fade" id="modal-default">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Default Modal</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!--END MODAL tambah pendidik-->
