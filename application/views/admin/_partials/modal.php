@@ -131,6 +131,9 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <div class="modal-body">
+                    <span>Apakah anda ingin menghapus data?</span>
+                </div>
                 <div class="modal-footer">
                     <input type="hidden" name="id_akademik_delete" id="id_akademik_delete" class="form-control">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
@@ -144,25 +147,114 @@
 
 
 <!--MODAL tambah pendidik -->
-<div class="modal fade" id="modal-default">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Default Modal</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+<form>
+    <div class="modal fade" id="tambahPendidik">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Default Modal</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">NIP</label>
+                        <div class="col-md-10">
+                            <input type="text" name="NIP" id="NIP" class="form-control" placeholder="Nomor Induk Pegawai">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Nama Pendidik</label>
+                        <div class="col-md-10">
+                            <input type="text" name="nama_pendidik" id="nama_pendidik" class="form-control" placeholder="Nama Pendidik">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Email Pendidik</label>
+                        <div class="col-md-10">
+                            <input type="email" name="email_pendidik" id="email_pendidik" class="form-control" placeholder="Email Pendidik">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btn_simpanPendidik" class="btn btn-primary">Simpan</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <p>One fine body&hellip;</p>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</form>
+<!--END MODAL tambah pendidik-->
+
+<!--MODAL edit pendidik -->
+<form>
+    <div class="modal fade" id="Modal_pendidik_Edit">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Default Modal</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">NIP</label>
+                        <div class="col-md-10">
+                            <input type="text" name="NIP_edit" id="NIP_edit" class="form-control" placeholder="Nomor Induk Pegawai">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Nama Pendidik</label>
+                        <div class="col-md-10">
+                            <input type="text" name="nama_pendidik_edit" id="nama_pendidik_edit" class="form-control" placeholder="Nama Pendidik">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Email Pendidik</label>
+                        <div class="col-md-10">
+                            <input type="email" name="email_pendidik_edit" id="email_pendidik_edit" class="form-control" placeholder="Email Pendidik">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <input type="hidden" name="id_pendidik_edit" id="id_pendidik_edit" class="form-control" readonly>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btn_pendidik_update" class="btn btn-primary">Simpan</button>
+                </div>
             </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</form>
+<!--END MODAL edit pendidik-->
+
+
+<!--MODAL Pendidik DELETE-->
+<form>
+    <div class="modal fade" id="Modal_Pendidik_Delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hapus Pendidik</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span>Apakah anda ingin menghapus data?</span>
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" name="id_pendidik_delete" id="id_pendidik_delete" class="form-control">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="button" type="submit" id="btn_delete_pendidik" class="btn btn-primary">Iya</button>
+                </div>
             </div>
         </div>
-        <!-- /.modal-content -->
     </div>
-    <!-- /.modal-dialog -->
-</div>
-<!--END MODAL tambah pendidik-->
+</form>
+<!--END MODAL Pendidik DELETE-->

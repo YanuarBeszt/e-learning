@@ -8,16 +8,14 @@
                             <div class="col-md-10">
                                 <h3 class="card-title">Daftar Pendidik</h3>
                             </div>
-                            <div class="col-md-2">
-                                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#tambahPendidik">
-                                    Tambah
-                                </button>
+                            <div class="col-md-2" style="text-align: right;">
+                                <button type="submit" class="btn btn-primary tambahPendidik" data-toggle="modal" data-target="#tambahPendidik">Tambah</button>
                             </div>
                         </div>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table id="dataKelas" class="table table-bordered table-striped">
+                        <table id="datapendidik" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -28,7 +26,7 @@
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
-                            <tbody id="show_data">
+                            <tbody id="show_data_pendidik">
                             </tbody>
                             <tfoot>
                                 <tr>
