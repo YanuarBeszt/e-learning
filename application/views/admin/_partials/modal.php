@@ -122,7 +122,7 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label">Nama Kelas</label>
                         <div class="col-md-10">
-                            <input type="text" name="nama_kelas_edit" id="nama_kelas_edit" class="form-control" placeholder="Nama Kelas">
+                            <input type="text" name="nama_kelas_delete" id="nama_kelas_delete" class="form-control" placeholder="Nama Kelas">
                         </div>
                     </div>
                 </div>
@@ -152,13 +152,13 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label">Nama Akademik</label>
                         <div class="col-md-10">
-                            <input type="text" name="nama_akademik_edit" id="nama_akademik_edit" class="form-control" placeholder="Nama Akademik">
+                            <input type="text" name="nama_akademik_delete" id="nama_akademik_delete" class="form-control" placeholder="Nama Akademik">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label">Kode Akademik</label>
                         <div class="col-md-10">
-                            <input type="text" name="kode_akademik_edit" id="kode_akademik_edit" class="form-control" placeholder="Kode Akademik">
+                            <input type="text" name="kode_akademik_delete" id="kode_akademik_delete" class="form-control" placeholder="Kode Akademik">
                         </div>
                     </div>
                 </div>

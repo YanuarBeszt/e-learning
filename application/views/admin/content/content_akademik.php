@@ -21,13 +21,13 @@
                                     <div class="col-md-7">
                                         <div class="form-group">
                                             <label for="nama_akademik">Nama Akademik</label>
-                                            <input type="text" class="form-control" name="nama_akademik" id="nama_akademik" placeholder="Nama Akademik">
+                                            <input type="text" class="form-control" name="save_nama_akademik" id="nama_akademik" placeholder="Nama Akademik">
                                         </div>
                                     </div>
                                     <div class="col-md-7">
                                         <div class="form-group">
                                             <label for="kode_akademik">Kode Akademik</label>
-                                            <input type="text" class="form-control" name="kode_akademik" id="kode_akademik" placeholder="Kode Akademik">
+                                            <input type="text" class="form-control" name="save_kode_akademik" id="kode_akademik" placeholder="Kode Akademik">
                                         </div>
                                     </div>
                                     <div class="col-md-2" style="margin-top: 32px;">
