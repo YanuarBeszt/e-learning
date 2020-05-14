@@ -36,7 +36,7 @@
             });
         }
 
-        //Save Akademik
+         //Save Akademik
         $('#btn_save_akademik').on('click', function() {
             var nama_akademik = $('#nama_akademik').val();
             var kode_akademik = $('#kode_akademik').val();
@@ -122,5 +122,5 @@
             });
             return false;
         });
-        
+    });
 </script>
