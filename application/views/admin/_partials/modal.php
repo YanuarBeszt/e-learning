@@ -107,6 +107,24 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Nama Penddik</label>
+                        <div class="col-md-10">
+                            <input type="text" name="nama_penddik" id="nama_penddik_edit" class="form-control" placeholder="Nama Penddik">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Email Pendidik</label>
+                        <div class="col-md-10">
+                            <input type="email" name="email_pendidik" id="email_pendidik" class="form-control" placeholder="Email pendidik" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Nama Kelas</label>
+                        <div class="col-md-10">
+                            <input type="text" name="nama_kelas_delete" id="nama_kelas_delete" class="form-control" placeholder="Nama Kelas">
+                        </div>
+                    </div>
                     <span>Apakah anda ingin menghapus data?</span>
                 </div>
                 <div class="modal-footer">
