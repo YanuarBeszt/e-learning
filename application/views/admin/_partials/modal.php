@@ -80,7 +80,7 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label">Kode Akademik</label>
                         <div class="col-md-10">
-                            <input type="text" name="kode_akademik_edit" id="kode_akademik_edit" class="form-control" placeholder="kode_akademik_edit">
+                            <input type="text" name="kode_akademik_edit" id="kode_akademik_edit" class="form-control" placeholder="Kode Akademik">
                         </div>
                     </div>
                 </div>
@@ -107,24 +107,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group row">
-                        <label class="col-md-2 col-form-label">Nama Penddik</label>
-                        <div class="col-md-10">
-                            <input type="text" name="nama_penddik" id="nama_penddik_edit" class="form-control" placeholder="Nama Penddik">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2 col-form-label">Email Pendidik</label>
-                        <div class="col-md-10">
-                            <input type="email" name="email_pendidik" id="email_pendidik" class="form-control" placeholder="Email pendidik" readonly>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2 col-form-label">Nama Kelas</label>
-                        <div class="col-md-10">
-                            <input type="text" name="nama_kelas_edit" id="nama_kelas_edit" class="form-control" placeholder="Nama Kelas">
-                        </div>
-                    </div>
+                    <span>Apakah anda ingin menghapus data?</span>
                 </div>
                 <div class="modal-footer">
                     <input type="hidden" name="id_kelas_delete" id="id_kelas_delete" class="form-control">
@@ -147,20 +130,6 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group row">
-                        <label class="col-md-2 col-form-label">Nama Akademik</label>
-                        <div class="col-md-10">
-                            <input type="text" name="nama_akademik_edit" id="nama_akademik_edit" class="form-control" placeholder="Nama Akademik">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2 col-form-label">Kode Akademik</label>
-                        <div class="col-md-10">
-                            <input type="text" name="kode_akademik_edit" id="kode_akademik_edit" class="form-control" placeholder="Kode Akademik">
-                        </div>
-                    </div>
                 </div>
                 <div class="modal-footer">
                     <input type="hidden" name="id_akademik_delete" id="id_akademik_delete" class="form-control">

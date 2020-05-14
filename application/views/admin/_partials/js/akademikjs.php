@@ -15,6 +15,9 @@
                     var html = '';
                     var i;
                     var number = 1;
+                    if (data.length === 0) {
+                        html += '<td valign="top" colspan="4" class="dataTables_empty">Data Kosong!</td>'
+                    }
                     for (i = 0; i < data.length; i++) {
                         html += '<tr>' +
                             '<td>' + number + '</td>' +
@@ -98,26 +101,26 @@
             return false;
         });
 
-    });
 
-    //Save Akademik
-    $('#btn_save_akademik').on('click', function() {
-        var nama_akademik = $('#nama_akademik').val();
-        var kode_akademik = $('#kode_akademik').val();
-        $.ajax({
-            type: "POST",
-            url: "<?php echo site_url('Admin/Akademik/save') ?>",
-            dataType: "JSON",
-            data: {
-                nama_akademik: nama_akademik,
-                kode_akademik: kode_akademik
-            },
-            success: function(data) {
-                $('[name="nama_akademik"]').val("");
-                $('[name="kode_akademik"]').val("");
-                show_akademik();
-            }
+        //Save Akademik
+        $('#btn_save_akademik').on('click', function() {
+            var nama_akademik = $('#nama_akademik').val();
+            var kode_akademik = $('#kode_akademik').val();
+            $.ajax({
+                type: "POST",
+                url: "<?php echo site_url('Admin/Akademik/save') ?>",
+                dataType: "JSON",
+                data: {
+                    nama_akademik: nama_akademik,
+                    kode_akademik: kode_akademik
+                },
+                success: function(data) {
+                    $('[name="nama_akademik"]').val("");
+                    $('[name="kode_akademik"]').val("");
+                    show_akademik();
+                }
+            });
+            return false;
         });
-        return false;
     });
 </script>
