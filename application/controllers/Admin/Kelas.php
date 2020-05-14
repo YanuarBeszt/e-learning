@@ -12,6 +12,7 @@ class Kelas extends CI_Controller
     {
         // penyimpanan data array ke string data
         $data['content'] = VIEW_ADMIN . "content_kelas";
+        $data['jsfile'] = "admin/_partials/js/kelasjs.php";
         $data['kelas'] = $this->Kelas_model->kelas_list();
         // load view admin/overview.php
         $this->load->view("admin/overview", $data);

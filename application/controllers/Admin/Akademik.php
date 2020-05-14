@@ -12,6 +12,7 @@ class Akademik extends CI_Controller
     {
         // penyimpanan data array ke string data
         $data['content'] = VIEW_ADMIN . "content_akademik";
+        $data['jsfile'] = "admin/_partials/js/akademikjs.php";
         $data['akademik'] = $this->Akademik_model->akademik_list();
         // load view admin/overview.php
         $this->load->view("admin/overview", $data);

@@ -44,4 +44,10 @@
     <!-- jQuery -->
     <?php $this->load->view("admin/_partials/js.php") ?>
 
+    <?php if ($jsfile != '') : ?>
+        <?php $this->load->view($jsfile); ?>
+    <?php endif; ?>
+
+</body>
+
 </html>
