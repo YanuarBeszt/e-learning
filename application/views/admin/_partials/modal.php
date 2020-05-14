@@ -80,7 +80,7 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label">Kode Akademik</label>
                         <div class="col-md-10">
-                            <input type="text" name="kode_akademik_edit" id="kode_akademik_edit" class="form-control" placeholder="kode_akademik_edit">
+                            <input type="text" name="kode_akademik_edit" id="kode_akademik_edit" class="form-control" placeholder="Kode Akademik">
                         </div>
                     </div>
                 </div>
@@ -125,6 +125,7 @@
                             <input type="text" name="nama_kelas_delete" id="nama_kelas_delete" class="form-control" placeholder="Nama Kelas">
                         </div>
                     </div>
+                    <span>Apakah anda ingin menghapus data?</span>
                 </div>
                 <div class="modal-footer">
                     <input type="hidden" name="id_kelas_delete" id="id_kelas_delete" class="form-control">

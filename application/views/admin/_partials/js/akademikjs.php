@@ -15,6 +15,9 @@
                     var html = '';
                     var i;
                     var number = 1;
+                    if (data.length === 0) {
+                        html += '<td valign="top" colspan="4" class="dataTables_empty">Data Kosong!</td>'
+                    }
                     for (i = 0; i < data.length; i++) {
                         html += '<tr>' +
                             '<td>' + number + '</td>' +
@@ -119,7 +122,5 @@
             });
             return false;
         });
-
-    });
-
+        
 </script>

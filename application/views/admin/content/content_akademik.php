@@ -18,7 +18,7 @@
                         <form role="form" action="">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-7">
+                                    <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="nama_akademik">Nama Akademik</label>
                                             <input type="text" class="form-control" name="save_nama_akademik" id="nama_akademik" placeholder="Nama Akademik">
@@ -76,4 +76,3 @@
         </div>
     </div>
 </section>
-
