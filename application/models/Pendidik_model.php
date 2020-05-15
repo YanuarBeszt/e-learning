@@ -11,14 +11,13 @@ class Pendidik_model extends CI_Model
     function save_pendidik()
     {
         $foto = base_url("assets/dist/img/avatar.png");
-        $password = md5($this->input->post('NIP'));
-        $username = $this->input->post('NIP');
+        $nip = $this->input->post('NIP');
         $data = array(
-            'NIP'  => $this->input->post('NIP'),
+            'NIP'  => $nip,
             'nama_pendidik'  => $this->input->post('nama_pendidik'),
             'email_pendidik'  => $this->input->post('email_pendidik'),
-            'username_pendidik'  => $username,
-            'password_pendidik'  => $password,
+            'username_pendidik'  => $nip,
+            'password_pendidik'  => password_hash($nip, PASSWORD_BCRYPT),
             'foto_pendidik'  => $foto
         );
         $result = $this->db->insert('tb_pendidik', $data);
@@ -27,15 +26,14 @@ class Pendidik_model extends CI_Model
 
     function update_pendidik()
     {
-        $password = md5($this->input->post('NIP_edit'));
-        $username = $this->input->post('NIP_edit');
+        $nip = $this->input->post('NIP_edit');
 
         $pendidik_id = $this->input->post('id_pendidik_edit');
         $nama_pendidik = $this->input->post('nama_pendidik_edit');
-        $NIP  = $this->input->post('NIP_edit');
+        $NIP  = $nip;
         $email_pendidik  = $this->input->post('email_pendidik_edit');
-        $username_pendidik  = $username;
-        $password_pendidik  = $password;
+        $username_pendidik  = $nip;
+        $password_pendidik  = password_hash($nip, PASSWORD_BCRYPT);
 
         $this->db->set('NIP', $NIP);
         $this->db->set('nama_pendidik', $nama_pendidik);

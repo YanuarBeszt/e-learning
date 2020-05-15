@@ -116,17 +116,18 @@
             var NIP = $('#NIP').val();
             $.ajax({
                 type: "POST",
-                url: "<?php echo site_url('Admin/pendidik/save') ?>",
+                url: "<?php echo site_url('Admin/Pendidik/save') ?>",
                 dataType: "JSON",
                 data: {
+                    NIP: NIP,
                     nama_pendidik: nama_pendidik,
-                    email_pendidik: email_pendidik,
-                    NIP: NIP
+                    email_pendidik: email_pendidik
                 },
                 success: function(data) {
                     $('[name="nama_pendidik"]').val("");
                     $('[name="email_pendidik"]').val("");
                     $('[name="NIP"]').val("");
+                    $('#tambahPendidik').modal('hide');
                     show_pendidik();
                 }
             });
